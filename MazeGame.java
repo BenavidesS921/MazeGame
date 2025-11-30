@@ -4,8 +4,8 @@ public class MazeGame
   public static void main(String[] args)
   {
     //read maze.dat file
-    try (BufferedReader br = new BufferedReader(new FileReader("maze.dat")))
-      {
+    try{ 
+        BufferedReader br = new BufferedReader(new FileReader("maze.dat"));
         while(true)
           {
             String[] block = new String[20];
