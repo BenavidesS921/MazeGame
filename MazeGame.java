@@ -11,7 +11,7 @@ public class MazeGame
             String[] block = new String[20];
             //read 20 lines
             int counter = 0;
-            while(count < 20)
+            while(counter < 20)
               {
                 String line = br.readLine();
                 if(line == null)
@@ -22,11 +22,11 @@ public class MazeGame
                 {
                   continue;
                 }
-                block[counter++] = line
+                block[counter++] = line;
               }
             Maze m = new Maze(block); //creates maze object
             System.out.println(m.printBlock()); //prints maze
-            System.out.println(m.toString()); //prints Maze:YES or Maze:NO
+            System.out.println(m.toString(0,0)); //prints Maze:YES or Maze:NO
             System.out.println();
           }
       } catch (IOException e) {

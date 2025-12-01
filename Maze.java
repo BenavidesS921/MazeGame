@@ -25,7 +25,7 @@ public class Maze
     return sb.toString();
   }
   //toString method prints Maze:YES or Maze:NO
-  public toString(int startRow, int startCol)
+  public String toString(int startRow, int startCol)
   {
     boolean [][] visited = new boolean[20][20];
     int row = startRow;
@@ -42,14 +42,13 @@ public class Maze
             }
           }
       }
+
     if(isSolvable(row, col, visited))
       {
-        return "Maze: YES"; //solvable
+          return "Maze: YES"; //solvable
+      } else {
+          return "Maze: NO"; //not solvable
       }
-    else
-    {
-      return "Maze: NO"; //not solvable
-    }
   }
   //boolean refering if maze is solvable
   private boolean isSolvable(int row, int col, boolean[][] visited)
